@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: devops-demo-eliza
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: devops-demo-eliza
+  template:
+    metadata:
+      labels:
+        app: devops-demo-eliza
+    spec:
+      containers:
+        - name: devops-demo-eliza
+          image: devops-demo-eliza:latest
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8080

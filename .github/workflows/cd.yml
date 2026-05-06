@@ -1,0 +1,38 @@
+name: Deploy to Minikube
+
+on:
+  push:
+    branches: [ "master" ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Get project code
+        uses: actions/checkout@v4
+
+      - name: Set up Java 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+          cache: 'maven'
+
+      - name: Build application with Maven
+        run: mvn -B clean package
+
+      - name: Build Docker image
+        run: docker build -t devops-demo-eliza:latest .
+
+      - name: Start Minikube
+        uses: medyagh/setup-minikube@master
+
+      - name: Load Docker image into Minikube
+        run: minikube image load devops-demo-eliza:latest
+
+      - name: Deploy application to Kubernetes
+        run: kubectl apply -f k8s/
+
+      - name: Show Kubernetes resources
+        run: kubectl get all
