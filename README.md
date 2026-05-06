@@ -12,7 +12,7 @@ I added a GitHub Actions CI workflow to the project.
 
 The workflow runs automatically when code is pushed to the "master" branch. It checks out the project code, sets up Java 21, and runs the Maven test command:
 
-'mvn -B clean test'
+`mvn -B clean package`
 
 The workflow completed successfully in the GitHub Actions tab.
 
@@ -61,13 +61,13 @@ The DevContainer setup helps make the development environment more consistent, b
 
 The DevContainer files are located in:
 
-'.devcontainer/'
+`.devcontainer/`
 
 ## Serverless Exercise
 
 The repository also contains a serverless exercise folder:
 
-'my-serverless-app/'
+`my-serverless-app/`
 
 This folder was created as part of the DevOps assignment to practice basic serverless project structure and commands.
 
@@ -75,13 +75,13 @@ This folder was created as part of the DevOps assignment to practice basic serve
 
 1. Open the repository on GitHub.
 2. Go to the **Actions** tab.
-3. Check the workflow named **Java CI with Maven**.
+3. Check the workflows named **Java CI with Maven** and **Deploy to Minikube**.
 4. The latest workflow run should show a green checkmark.
 5. The workflow file can be found here:
 
-'.github/workflows/ci.yml'
+`.github/workflows/ci.yml`
 
-This confirms that GitHub Actions CI is working for the project.
+This confirms that GitHub Actions CI/CD is working for the project.
 
 
 ## Continuous Deployment to Minikube
@@ -94,16 +94,16 @@ The CD workflow:
 - builds the Docker image
 - starts Minikube
 - loads the Docker image into Minikube
-- applies the Kubernetes deployment and service files from the 'k8s/' folder
-- shows the Kubernetes resources with 'kubectl get all'
+- applies the Kubernetes deployment and service files from the `k8s/` folder
+- shows the Kubernetes resources with `kubectl get all`
 
 The CD workflow file is located here:
 
-'.github/workflows/cd.yml'
+`.github/workflows/cd.yml`
 
 The Kubernetes files are located here:
 
-'k8s/deployment.yaml'  
-'k8s/service.yaml'
+`k8s/deployment.yaml`  
+`k8s/service.yaml`
 
 Both the CI and CD workflows completed successfully in the GitHub Actions tab.
