@@ -30,14 +30,26 @@ For this assignment, I worked with:
 
 - GitHub Actions CI for automatic build/test checks
 - Maven for building and testing the Spring Boot project
-- A serverless exercise folder named "my-serverless-app"
+- Docker image build in the CI workflow
+- Kubernetes deployment and service files
+- GitHub Actions CD workflow that deploys to Minikube
+- A serverless exercise folder named `my-serverless-app`
 - Existing DevOps-related project files from earlier exercises
 
 The CI workflow is located in:
 
-'.github/workflows/ci.yml'
+`.github/workflows/ci.yml`
 
-The workflow passed successfully in the GitHub Actions tab.
+The CD workflow is located in:
+
+`.github/workflows/cd.yml`
+
+The Kubernetes files are located in:
+
+`k8s/deployment.yaml`  
+`k8s/service.yaml`
+
+Both the CI and CD workflows passed successfully in the GitHub Actions tab.
 
 
 
