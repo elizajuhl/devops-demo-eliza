@@ -34,3 +34,15 @@ The CI workflow is located in:
 ".github/workflows/ci.yml"
 
 The workflow passed successfully in the GitHub Actions tab.
+
+
+
+## DevContainer
+
+This project also contains DevContainer files for running the development environment in a container.
+
+The DevContainer setup helps make the development environment more consistent, because the required tools and configuration can be shared with the project instead of only being installed locally.
+
+The DevContainer files are located in:
+
+".devcontainer/"
