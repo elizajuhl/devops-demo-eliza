@@ -16,6 +16,10 @@ The workflow runs automatically when code is pushed to the "master" branch. It c
 
 The workflow completed successfully in the GitHub Actions tab.
 
+The CI workflow also builds a Docker image using:
+
+'docker build -t devops-demo-eliza:latest .'
+
 
 
 ## DevOps Assignment Overview
