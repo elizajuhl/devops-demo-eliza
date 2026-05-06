@@ -15,3 +15,22 @@ The workflow runs automatically when code is pushed to the "master" branch. It c
 "mvn -B clean test"
 
 The workflow completed successfully in the GitHub Actions tab.
+
+
+
+## DevOps Assignment Overview
+
+This repository contains a Spring Boot project used for DevOps practice.
+
+For this assignment, I worked with:
+
+- GitHub Actions CI for automatic build/test checks
+- Maven for building and testing the Spring Boot project
+- A serverless exercise folder named "my-serverless-app"
+- Existing DevOps-related project files from earlier exercises
+
+The CI workflow is located in:
+
+".github/workflows/ci.yml"
+
+The workflow passed successfully in the GitHub Actions tab.
