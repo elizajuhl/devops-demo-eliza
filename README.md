@@ -2,7 +2,7 @@
 
 1. Open Visual Studio Code 
 2. Use the command pallete(Ctrl + Shift + P): Click "Git:Clone..."
-3. Paste the URL: https://github.com/viajook/devops-demo.git
+3. Paste the URL: https://github.com/elizajuhl/devops-demo-eliza.git
 4. Allow Visual Studio Code do the cloning, and then reopen in a dev container
 5. Click to allow reopening in a dev container
 
@@ -10,7 +10,7 @@
 
 I added a GitHub Actions CI workflow to the project.
 
-The workflow runs automatically when code is pushed to the "master" branch. It checks out the project code, sets up Java 21, and runs the Maven test command:
+The workflow runs automatically when code is pushed to the "master" branch. It checks out the project code, sets up Java 21, and runs the Maven build/test command:
 
 `mvn -B clean package`
 
@@ -18,7 +18,7 @@ The workflow completed successfully in the GitHub Actions tab.
 
 The CI workflow also builds a Docker image using:
 
-'docker build -t devops-demo-eliza:latest .'
+`docker build -t devops-demo-eliza:latest .`
 
 
 
