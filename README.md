@@ -70,3 +70,28 @@ This folder was created as part of the DevOps assignment to practice basic serve
 '.github/workflows/ci.yml'
 
 This confirms that GitHub Actions CI is working for the project.
+
+
+## Continuous Deployment to Minikube
+
+I also added a CD workflow that deploys the application to a local Minikube Kubernetes cluster in GitHub Actions.
+
+The CD workflow:
+
+- builds the Spring Boot application with Maven
+- builds the Docker image
+- starts Minikube
+- loads the Docker image into Minikube
+- applies the Kubernetes deployment and service files from the 'k8s/' folder
+- shows the Kubernetes resources with 'kubectl get all'
+
+The CD workflow file is located here:
+
+'.github/workflows/cd.yml'
+
+The Kubernetes files are located here:
+
+'k8s/deployment.yaml'  
+'k8s/service.yaml'
+
+Both the CI and CD workflows completed successfully in the GitHub Actions tab.
