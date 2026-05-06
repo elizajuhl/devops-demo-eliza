@@ -5,3 +5,13 @@
 3. Paste the URL: https://github.com/viajook/devops-demo.git
 4. Allow Visual Studio Code do the cloning, and then reopen in a dev container
 5. Click to allow reopening in a dev container
+
+## GitHub Actions CI
+
+I added a GitHub Actions CI workflow to the project.
+
+The workflow runs automatically when code is pushed to the "master" branch. It checks out the project code, sets up Java 21, and runs the Maven test command:
+
+"mvn -B clean test"
+
+The workflow completed successfully in the GitHub Actions tab.
