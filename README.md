@@ -54,3 +54,15 @@ The repository also contains a serverless exercise folder:
 'my-serverless-app/'
 
 This folder was created as part of the DevOps assignment to practice basic serverless project structure and commands.
+
+## How to Verify the DevOps Setup
+
+1. Open the repository on GitHub.
+2. Go to the **Actions** tab.
+3. Check the workflow named **Java CI with Maven**.
+4. The latest workflow run should show a green checkmark.
+5. The workflow file can be found here:
+
+'.github/workflows/ci.yml'
+
+This confirms that GitHub Actions CI is working for the project.
