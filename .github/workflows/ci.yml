@@ -24,5 +24,5 @@ jobs:
       - name: Build and test with Maven
         run: mvn -B clean package
 
-        - name: Build Docker image
-  run: docker build -t devops-demo-eliza:latest .
+      - name: Build Docker image
+        run: docker build -t devops-demo-eliza:latest .
