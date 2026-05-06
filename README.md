@@ -12,7 +12,7 @@ I added a GitHub Actions CI workflow to the project.
 
 The workflow runs automatically when code is pushed to the "master" branch. It checks out the project code, sets up Java 21, and runs the Maven test command:
 
-"mvn -B clean test"
+'mvn -B clean test'
 
 The workflow completed successfully in the GitHub Actions tab.
 
@@ -31,7 +31,7 @@ For this assignment, I worked with:
 
 The CI workflow is located in:
 
-".github/workflows/ci.yml"
+'.github/workflows/ci.yml'
 
 The workflow passed successfully in the GitHub Actions tab.
 
@@ -45,4 +45,12 @@ The DevContainer setup helps make the development environment more consistent, b
 
 The DevContainer files are located in:
 
-".devcontainer/"
+'.devcontainer/'
+
+## Serverless Exercise
+
+The repository also contains a serverless exercise folder:
+
+'my-serverless-app/'
+
+This folder was created as part of the DevOps assignment to practice basic serverless project structure and commands.
